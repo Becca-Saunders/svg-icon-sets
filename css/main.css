@@ -1,8 +1,5 @@
 html {
   box-sizing: border-box;
-  background: linear-gradient(#ff9500, #ff5e3a);
-  background-repeat: no-repeat;
-  min-height: 100%;
   font-family: "overpass", sans-serif;
 }
 
@@ -18,25 +15,37 @@ html {
 }
 
 body {
-  margin: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-
-h1 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 2rem;
-}
-
-main div {
+section {
+  background: linear-gradient(#ff9500, #ff5e3a);
+  background-repeat: no-repeat;
+  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   color: #fff;
+  padding: 6vmin;
+  grid-template-area:
+
+}
+
+h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 2rem;
   justify-content: center;
 }
 
-div h2 {
+div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+div h2 {
   margin: 0;
   font-size: 1.25rem;
 }
