@@ -17,10 +17,11 @@ html {
 body {
   margin-left: 0;
   margin-right: 0;
+  margin-top: 0;
 }
 
 section {
-  background: linear-gradient(#ff9500, #ff5e3a);
+  background-image: linear-gradient(#ff9500, #ff5e3a);
   background-repeat: no-repeat;
   min-height: 100%;
   display: grid;
@@ -28,14 +29,17 @@ section {
   color: #fff;
   padding: 6vmin;
   grid-template-area:
-
+    "header header header"
+    "one two three";
 }
 
-h2 {
+.h2 {
   color: #fff;
   font-weight: 400;
   font-size: 2rem;
   justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 div {
@@ -53,6 +57,9 @@ div h2 {
 .icon svg {
   margin-bottom: 1rem;
   fill: currentColor;
+  width: 8em;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 a {
@@ -75,5 +82,23 @@ a {
 
   div {
     align-content: center;
+  }
+}
+
+@media only screen and (max-wdith:38em) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .one {
+    grid-area: one;
+  }
+
+  .two {
+    grid-area: two;
+  }
+
+  .three {
+    grid-area: three;
   }
 }
