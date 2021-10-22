@@ -24,37 +24,35 @@ body {
 section {
   background-image: linear-gradient(#ff9500, #ff5e3a);
   background-repeat: no-repeat;
-  min-height: 100%;
   color: #fff;
   padding: 6vmin;
+  gap: 6vmin;
   display: grid;
   grid-template-areas: "header" "one" "two" "three";
 }
 
-.h2 {
+h2 {
   color: #fff;
-  font-weight: bold;
   font-size: 2rem;
   justify-self: center;
-  margin-top: 0;
-  padding-top: 0;
+  margin: 0;
   grid-area: header;
 }
 
 div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 div h3 {
-  margin: 0;
+  margin-top: 0;
   font-size: 1.5rem;
 }
 
 .icon svg {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   fill: currentColor;
   width: 8em;
   padding-top: 0;
@@ -65,34 +63,20 @@ a {
   text-align: center;
   text-decoration: none;
   border-style: solid;
-  width: 18rem;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
   color: #fff;
+}
+
+p {
+  margin: 0;
+  padding-top: 0;
 }
 
 a:hover {
   background-color: #fff;
   color: orange;
-}
-
-.one {
-  grid-area: one;
-}
-
-.two {
-  grid-area: two;
-}
-
-.three {
-  grid-area: three;
-}
-
-p {
-  margin-left: .5rem;
-  margin-right: .5rem;
 }
 
 @media only screen and (min-width: 38em) {
@@ -101,7 +85,6 @@ p {
     grid-template-areas:
       "header header header"
       "one two three";
-    grid-gap: 1em;
   }
 
 }
