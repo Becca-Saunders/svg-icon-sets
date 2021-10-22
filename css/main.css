@@ -24,32 +24,31 @@ section {
   background-image: linear-gradient(#ff9500, #ff5e3a);
   background-repeat: no-repeat;
   min-height: 100%;
-  display: grid;
   grid-template-columns: 1fr;
   color: #fff;
   padding: 6vmin;
-  grid-template-area:
-    "header header header"
-    "one two three";
+  display: grid;
+  grid-template-areas: "header" "one" "two" "three";
 }
 
 .h2 {
   color: #fff;
   font-weight: 400;
   font-size: 2rem;
-  justify-content: center;
+  justify-self: center;
   margin-top: 0;
   padding-top: 0;
+  grid-area: header;
 }
 
 div {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-div h2 {
+div h3 {
   margin: 0;
   font-size: 1.25rem;
 }
@@ -74,31 +73,41 @@ a {
   color: #fff;
 }
 
-@media only screen and (max-width: 600px) {
-  html {
-    display: flex;
-    flex-direction: row;
-  }
-
-  div {
-    align-content: center;
-  }
+a:hover {
+  background-color: #fff;
+  color: orange;
 }
 
-@media only screen and (max-wdith:38em) {
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+p {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+@media only screen and (min-width:38em) {
+  section {
+    grid-template-areas:
+      "header header header"
+      "one two three";
+    grid-gap: 1em;
+  }
+
+}
+
+/*
+@media only screen and (min-wdith:38em) {
   section {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
-  .one {
-    grid-area: one;
-  }
-
-  .two {
-    grid-area: two;
-  }
-
-  .three {
-    grid-area: three;
-  }
-}
+*/
